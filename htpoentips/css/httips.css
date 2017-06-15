@@ -1,0 +1,54 @@
+/*animate*/
+.optyshow{-webkit-animation:optyshow 0.4s linear forwards;}
+@-webkit-keyframes optyshow{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@keyframes optyshow{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.optyhide{-webkit-animation:optyhide 0.4s linear forwards;}
+@-webkit-keyframes optyhide{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+@-ms-keyframes ptyhide{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+/*animate--end*/
+
+
+/*tipstyle*/
+.ht-tips-errorbox {
+  position: fixed;
+  bottom: 6rem;
+  left: 0%;
+  width: 100%;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+.ht-tips-errorbox > .tips {
+  min-height: 20px;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+
+
+
+
+/*tipstyle end*/
+
+
+
