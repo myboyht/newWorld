@@ -13,14 +13,14 @@ function opentips(tipstell,timeout){
 						'</div>'+
 						'</div>'	
 			
-			if($('body').has('.errorbox').get(0)){
+			if($('body').has('ht-tips-errorbox').get(0)){
 				return
 			}else{
 			$('body').append(this.temp)
 			var t1 = setTimeout(function(){
 				$(".ht-tips-errorbox").addClass('optyhide');
 				var t2 =setTimeout(function(){
-					$('body .errorbox').remove();
+					$('body .ht-tips-errorbox').remove();
 				},400)
 			},this.timeout)
 			}
