@@ -1,5 +1,7 @@
 /*depend by jquery*/
 
+/*depend by jquery*/
+
 
 function opentips(tipstell,timeout){
 		if(tipstell==undefined){tipstell=''};
@@ -13,7 +15,7 @@ function opentips(tipstell,timeout){
 						'</div>'+
 						'</div>'	
 			
-			if($('body').has('ht-tips-errorbox').get(0)){
+			if($('body').has('.ht-tips-errorbox').get(0)){
 				return
 			}else{
 			$('body').append(this.temp)
