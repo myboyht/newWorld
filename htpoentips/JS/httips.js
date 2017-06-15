@@ -1,8 +1,5 @@
 /*depend by jquery*/
 
-/*depend by jquery*/
-
-
 function opentips(tipstell,timeout){
 		if(tipstell==undefined){tipstell=''};
 		this.tipopen=function(tipstell,timeout){
