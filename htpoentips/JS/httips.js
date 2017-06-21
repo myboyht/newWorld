@@ -73,6 +73,61 @@ function opentips(tipstell,timeout){
 			}
 		}
 		/*singal btn tips show hide box END*/
+		
+		
+		this.doblebtnbox=function(biaoti,tipstell,btnfont,leftbtnfont,btnfun,leftbtnfun,closefun){
+			//标题  内容  确定按钮文字 取消按钮文字 
+			if(biaoti==undefined){biaoti='提示1'};
+			if(btnfont==undefined){biaoti='确定'};
+			if(leftbtnfont==undefined||leftbtnfont==''){leftbtnfont='取消'}
+			if(btnfun==undefined){
+				btnfun=function(){
+					publickclose();
+				}
+			}
+			closefun==undefined?closefun = function (){publickclose();}:'';
+			
+			leftbtnfun==undefined?leftbtnfun = function(){publickclose();}:'';
+			
+			publickclose=function(){
+				$(".ht-tips-tishibox").removeClass('botshow').addClass('bothide');
+				var t4 = setTimeout(function(){$(".ht-tips-tishibox").remove()},600)
+			}
+			this.btnfont = btnfont;
+			this.biaoti = biaoti;
+			this.tipsfont=tipstell;
+			this.leftbtnfont = leftbtnfont
+			this.temp=  '<div class="ht-tips-tishibox">'+
+						'<button class="closetop">'+
+							'<i></i>'+
+							'<i></i>'+
+						'</button>'+
+						'<h2 class="tiphead">'+this.biaoti+'</h2>'+
+						'<p class="tipsbody">'+this.tipsfont+'</p>'+
+						'<div class="btn-group-2">'+
+							'<button>'+ this.leftbtnfont+'</button>'+
+							'<button>'+ this.btnfont+'</button>'+
+						'</div>';
+			
+			if($('body').has('.ht-tips-tishibox').get(0)){
+				return
+			}else{
+				$('body').append(this.temp);
+				$(".ht-tips-tishibox").addClass('botshow');
+				$(".ht-tips-tishibox .closetop").on('click',function(){
+					closefun()
+				})
+				$(".ht-tips-tishibox .btn-group-2 button").eq(0).on("click",function(){
+					leftbtnfun();
+				})
+				$(".ht-tips-tishibox .btn-group-2 button").eq(1).on("click",function(){
+					btnfun();
+				})
+			}
+			
+		}
+		/*doble btn tips show hide box END*/
+		
 	}
 
 
