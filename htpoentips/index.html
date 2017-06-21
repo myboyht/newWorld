@@ -15,4 +15,15 @@
 <script>
 	var tips = new opentips();
 	tips.tipopen('hello',2000)//输入的内容，显示时间	
+	tips.onebtnbox(
+		'标题',
+		'这里是内容',
+		'确定',
+		function btn1(){
+			console.log('点击确定')
+		},function btn2(){
+			console.log('点击关闭')
+		}
+		
+	)
 </script>
