@@ -1,8 +1,10 @@
 /*depend by jquery*/
 
+
+/*small tips show hide box*/
 function opentips(tipstell,timeout){
 		if(tipstell==undefined){tipstell=''};
-		this.tipopen=function(tipstell,timeout){
+		this.tipopen=function(tipstell,timeout){//提示语  消失时间毫秒计算
 			if(timeout==undefined){timeout=2000};
 			this.timeout = timeout;
 			this.tipsfont=tipstell;
@@ -23,6 +25,55 @@ function opentips(tipstell,timeout){
 				},400)
 			},this.timeout)
 			}
+		};
+		/*small tips show hide box END*/
+		
+		
+		this.onebtnbox=function(biaoti,tipstell,btnfont,btnfun,closefun){//标题  内容 按钮文字  点击确定 点击关闭
+			if(biaoti==undefined){biaoti='提示1'};
+			if(btnfont==undefined){biaoti='确定'};
+			if(btnfun==undefined){
+				btnfun=function(){
+					publickclose();
+				}
+			}
+			if(closefun==undefined){
+				closefun = function (){
+					publickclose();
+				}
+			}
+			publickclose=function(){
+				$(".ht-tips-tishibox").removeClass('botshow').addClass('bothide');
+				var t4 = setTimeout(function(){$(".ht-tips-tishibox").remove()},600)
+			}
+			this.btnfont = btnfont;
+			this.biaoti = biaoti;
+			this.tipsfont=tipstell;
+			this.temp=  '<div class="ht-tips-tishibox">'+
+						'<button class="closetop">'+
+							'<i></i>'+
+							'<i></i>'+
+						'</button>'+
+						'<h2 class="tiphead">'+this.biaoti+'</h2>'+
+						'<p class="tipsbody">'+this.tipsfont+'</p>'+
+						'<div class="btn-group-1 ">'+
+						'	<button onclick="">'+this.btnfont+'</button>'+
+						'</div>';
+			if($('body').has('.ht-tips-tishibox').get(0)){
+				return
+			}else{
+				$('body').append(this.temp);
+				$(".ht-tips-tishibox").addClass('botshow');
+				$(".ht-tips-tishibox .closetop").on('click',function(){
+					closefun()
+				})
+				$(".ht-tips-tishibox .btn-group-1").on("click",function(){
+					btnfun();
+				})
+			}
 		}
-						
+		/*singal btn tips show hide box END*/
 	}
+
+
+
