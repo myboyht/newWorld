@@ -1,30 +1,164 @@
 /*animate*/
-.optyshow{-webkit-animation:optyshow 0.4s linear forwards;}
-@-webkit-keyframes optyshow{
-	from{opacity: 0;}
-	to{opacity: 1;}
+.optyshow {
+  -webkit-animation: optyshow 0.4s linear forwards;
 }
-
-@keyframes optyshow{
-	from{opacity: 0;}
-	to{opacity: 1;}
+@-webkit-keyframes optyshow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-.optyhide{-webkit-animation:optyhide 0.4s linear forwards;}
-@-webkit-keyframes optyhide{
-	from{opacity: 1;}
-	to{opacity: 0;}
+@-moz-keyframes optyshow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-@-ms-keyframes ptyhide{
-	from{opacity: 1;}
-	to{opacity: 0;}
+@keyframes optyshow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
+.optyhide {
+  -webkit-animation: optyhide 0.4s linear forwards;
+}
+@-webkit-keyframes optyhide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes ptyhide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes ptyhide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.botshow {
+  -webkit-animation: botshow 0.6s cubic-bezier(0.14, 0.48, 0.5, 0.93) forwards;
+}
+@-webkit-keyframes botshow {
+  from {
+    opacity: 0;
+    transform: translateX(0%) translateY(50%);
+    -webkit-transform: translateX(0%) translateY(50%);
+    -moz-transform: translateX(0%) translateY(50%);
+    -ms-transform: translateX(0%) translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%);
+    -webkit-transform: translateX(0%) translateY(0%);
+    -moz-transform: translateX(0%) translateY(0%);
+    -ms-transform: translateX(0%) translateY(0%);
+  }
+}
+@-ms-keyframes botshow {
+  from {
+    opacity: 0;
+    transform: translateX(0%) translateY(50%);
+    -webkit-transform: translateX(0%) translateY(50%);
+    -moz-transform: translateX(0%) translateY(50%);
+    -ms-transform: translateX(0%) translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%);
+    -webkit-transform: translateX(0%) translateY(0%);
+    -moz-transform: translateX(0%) translateY(0%);
+    -ms-transform: translateX(0%) translateY(0%);
+  }
+}
+@-moz-keyframes botshow {
+  from {
+    opacity: 0;
+    transform: translateX(0%) translateY(50%);
+    -webkit-transform: translateX(0%) translateY(50%);
+    -moz-transform: translateX(0%) translateY(50%);
+    -ms-transform: translateX(0%) translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%);
+    -webkit-transform: translateX(0%) translateY(0%);
+    -moz-transform: translateX(0%) translateY(0%);
+    -ms-transform: translateX(0%) translateY(0%);
+  }
+}
+.bothide {
+  -webkit-animation: bothide 0.6s ease-out forwards;
+}
+@-webkit-keyframes bothide {
+  from {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%);
+    -webkit-transform: translateX(0%) translateY(0%);
+    -moz-transform: translateX(0%) translateY(0%);
+    -ms-transform: translateX(0%) translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(0%) translateY(50%);
+    -webkit-transform: translateX(0%) translateY(50%);
+    -moz-transform: translateX(0%) translateY(50%);
+    -ms-transform: translateX(0%) translateY(50%);
+  }
+}
+@-moz-keyframes bothide {
+  from {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%);
+    -webkit-transform: translateX(0%) translateY(0%);
+    -moz-transform: translateX(0%) translateY(0%);
+    -ms-transform: translateX(0%) translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(0%) translateY(50%);
+    -webkit-transform: translateX(0%) translateY(50%);
+    -moz-transform: translateX(0%) translateY(50%);
+    -ms-transform: translateX(0%) translateY(50%);
+  }
+}
+@-ms-keyframes bothide {
+  from {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%);
+    -webkit-transform: translateX(0%) translateY(0%);
+    -moz-transform: translateX(0%) translateY(0%);
+    -ms-transform: translateX(0%) translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(0%) translateY(50%);
+    -webkit-transform: translateX(0%) translateY(50%);
+    -moz-transform: translateX(0%) translateY(50%);
+    -ms-transform: translateX(0%) translateY(50%);
+  }
+}
 /*animate--end*/
-
-
-/*tipstyle*/
+.hide {
+  display: none;
+}
 .ht-tips-errorbox {
   position: fixed;
   bottom: 6rem;
@@ -43,12 +177,110 @@
   border-radius: 0.4rem;
   text-align: center;
 }
-
-
-
-
-
-/*tipstyle end*/
-
-
-
+.ht-tips-tishibox {
+  position: fixed;
+  min-height: 290px;
+  left: 50%;
+  top: 36%;
+  width: 480px;
+  background-color: #fff;
+  margin-left: -240px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(204, 204, 204, 0.2);
+}
+.ht-tips-tishibox .closetop {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  background-color: #fff;
+  outline: none;
+}
+.ht-tips-tishibox .closetop i {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #ccc;
+}
+.ht-tips-tishibox .closetop i:nth-child(1) {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.ht-tips-tishibox .closetop i:nth-child(2) {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.ht-tips-tishibox > .tiphead {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 60px;
+  font-weight: normal;
+  color: #18b748;
+}
+.ht-tips-tishibox > .tipsbody {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+  padding: 0 40px;
+  line-height: 18px;
+  min-height: 90px;
+}
+.ht-tips-tishibox > .btn-group-1 button {
+  min-width: 160px;
+  margin: 0 auto;
+  display: block;
+  outline: none;
+  border: none;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  padding: 0 20px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #18b748;
+  transition: all 0.3s;
+}
+.ht-tips-tishibox > .btn-group-1 button:hover {
+  background-color: #14cc4b;
+}
+.ht-tips-tishibox > .btn-group-2 {
+  text-align: center;
+}
+.ht-tips-tishibox > .btn-group-2 button {
+  min-width: 140px
+			margin: 0 12px;
+  outline: none;
+  border: none;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  padding: 0 20px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #18b748;
+  transition: all 0.3s;
+}
+.ht-tips-tishibox > .btn-group-2 button:hover {
+  background-color: #14cc4b;
+}
+.ht-tips-tishibox > .btn-group-2 button:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #999999;
+}
