@@ -261,8 +261,8 @@
   text-align: center;
 }
 .ht-tips-tishibox > .btn-group-2 button {
-  min-width: 140px
-			margin: 0 12px;
+  min-width: 140px;
+  margin: 0 12px;
   outline: none;
   border: none;
   height: 44px;
@@ -283,4 +283,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   color: #999999;
+}
+.ht-tips-tishibox > .btn-group-2 button:nth-child(2) {
+  border: 1px solid rgba(0, 0, 0, 0);
 }
