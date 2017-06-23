@@ -177,6 +177,14 @@
   border-radius: 0.4rem;
   text-align: center;
 }
+.pmblack {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .ht-tips-tishibox {
   position: fixed;
   min-height: 290px;
