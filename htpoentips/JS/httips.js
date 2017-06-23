@@ -44,12 +44,14 @@ function opentips(tipstell,timeout){
 			}
 			publickclose=function(){
 				$(".ht-tips-tishibox").removeClass('botshow').addClass('bothide');
-				var t4 = setTimeout(function(){$(".ht-tips-tishibox").remove()},600)
+				$(".pmblack").addClass('optyhide');
+				var t4 = setTimeout(function(){$(".pmblack").remove()},600)
 			}
 			this.btnfont = btnfont;
 			this.biaoti = biaoti;
 			this.tipsfont=tipstell;
-			this.temp=  '<div class="ht-tips-tishibox">'+
+			this.temp=  '<div class="pmblack">'+
+						'<div class="ht-tips-tishibox">'+
 						'<button class="closetop">'+
 							'<i></i>'+
 							'<i></i>'+
@@ -58,7 +60,9 @@ function opentips(tipstell,timeout){
 						'<p class="tipsbody">'+this.tipsfont+'</p>'+
 						'<div class="btn-group-1 ">'+
 						'	<button onclick="">'+this.btnfont+'</button>'+
-						'</div>';
+						'</div>'+
+						'</div>'
+						
 			if($('body').has('.ht-tips-tishibox').get(0)){
 				return
 			}else{
@@ -76,7 +80,7 @@ function opentips(tipstell,timeout){
 		
 		
 		this.doblebtnbox=function(biaoti,tipstell,btnfont,leftbtnfont,btnfun,leftbtnfun,closefun){
-			//标题  内容  确定按钮文字 取消按钮文字 
+			//标题  内容  确定按钮文字 取消按钮文字  确定按钮方法 取消按钮方法 关闭按钮方法
 			if(biaoti==undefined){biaoti='提示1'};
 			if(btnfont==undefined){biaoti='确定'};
 			if(leftbtnfont==undefined||leftbtnfont==''){leftbtnfont='取消'}
@@ -91,13 +95,15 @@ function opentips(tipstell,timeout){
 			
 			publickclose=function(){
 				$(".ht-tips-tishibox").removeClass('botshow').addClass('bothide');
-				var t4 = setTimeout(function(){$(".ht-tips-tishibox").remove()},600)
+				$(".pmblack").addClass('optyhide');
+				var t4 = setTimeout(function(){$(".pmblack").remove()},600)
 			}
 			this.btnfont = btnfont;
 			this.biaoti = biaoti;
 			this.tipsfont=tipstell;
-			this.leftbtnfont = leftbtnfont
-			this.temp=  '<div class="ht-tips-tishibox">'+
+			this.leftbtnfont = leftbtnfont;
+			this.temp=  '<div class="pmblack">'+
+						'<div class="ht-tips-tishibox">'+
 						'<button class="closetop">'+
 							'<i></i>'+
 							'<i></i>'+
@@ -107,6 +113,7 @@ function opentips(tipstell,timeout){
 						'<div class="btn-group-2">'+
 							'<button>'+ this.leftbtnfont+'</button>'+
 							'<button>'+ this.btnfont+'</button>'+
+						'</div>'+
 						'</div>';
 			
 			if($('body').has('.ht-tips-tishibox').get(0)){
